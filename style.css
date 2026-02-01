@@ -18,7 +18,7 @@ body {
 /* ===== GAME CONTAINER ===== */
 .game-container {
     text-align: center;
-    max-width: 1000px;
+    max-width: 800px;
     width: 100%;
     background: white;
     border-radius: 25px;
@@ -32,7 +32,7 @@ body {
 .game-container::before {
     content: "💕";
     position: absolute;
-    font-size: 250px;
+    font-size: 200px;
     opacity: 0.03;
     top: 50%;
     left: 50%;
@@ -44,7 +44,7 @@ body {
 h1 {
     font-family: 'Pacifico', cursive;
     color: #9d4edd;
-    font-size: 48px;
+    font-size: 42px;
     margin-bottom: 10px;
     position: relative;
     z-index: 1;
@@ -52,7 +52,7 @@ h1 {
 
 .subtitle {
     color: #c77dff;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 25px;
     position: relative;
     z-index: 1;
@@ -62,7 +62,7 @@ h1 {
 .stats-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     margin-bottom: 25px;
     position: relative;
     z-index: 1;
@@ -70,21 +70,21 @@ h1 {
 
 .stat {
     background: linear-gradient(135deg, #f3e5f5 0%, #e8daef 100%);
-    padding: 15px 25px;
+    padding: 15px 20px;
     border-radius: 15px;
-    min-width: 120px;
+    min-width: 100px;
     box-shadow: 0 5px 15px rgba(155, 89, 182, 0.1);
 }
 
 .stat-label {
     font-family: 'Pacifico', cursive;
-    font-size: 18px;
+    font-size: 16px;
     color: #7b2cbf;
     margin-bottom: 8px;
 }
 
 .stat-value {
-    font-size: 32px;
+    font-size: 28px;
     color: #9d4edd;
     font-weight: bold;
 }
@@ -92,11 +92,11 @@ h1 {
 /* ===== GAME INFO ===== */
 .game-info {
     background: #f8f0ff;
-    padding: 15px;
+    padding: 12px;
     border-radius: 12px;
     margin-bottom: 25px;
     color: #5a189a;
-    font-size: 18px;
+    font-size: 17px;
     position: relative;
     z-index: 1;
     border: 2px dashed #c77dff;
@@ -105,8 +105,8 @@ h1 {
 /* ===== GRID CONTAINER ===== */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
     margin-bottom: 30px;
     position: relative;
     z-index: 1;
@@ -162,7 +162,7 @@ h1 {
 }
 
 .card-emoji {
-    font-size: 40px;
+    font-size: 36px;
     margin-bottom: 8px;
 }
 
@@ -171,10 +171,11 @@ h1 {
     font-size: 14px;
     text-align: center;
     padding: 0 5px;
+    line-height: 1.2;
 }
 
 .question-mark {
-    font-size: 48px;
+    font-size: 42px;
     color: white;
 }
 
@@ -194,7 +195,7 @@ h1 {
 
 .feedback-message {
     font-family: 'Pacifico', cursive;
-    font-size: 24px;
+    font-size: 22px;
     color: #9d4edd;
     min-height: 40px;
     margin-bottom: 15px;
@@ -224,7 +225,7 @@ h1 {
 
 .progress-text {
     font-family: 'Pacifico', cursive;
-    font-size: 18px;
+    font-size: 17px;
     color: #7b2cbf;
 }
 
@@ -239,8 +240,8 @@ h1 {
 }
 
 .control-btn {
-    padding: 14px 30px;
-    font-size: 18px;
+    padding: 14px 25px;
+    font-size: 17px;
     background: linear-gradient(45deg, #c77dff, #9d4edd);
     color: white;
     border: none;
@@ -270,10 +271,10 @@ h1 {
 /* ===== INSTRUCTIONS ===== */
 .instructions {
     background: #f8f0ff;
-    padding: 15px;
+    padding: 12px;
     border-radius: 12px;
     color: #5a189a;
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
     z-index: 1;
     border-left: 4px solid #c77dff;
@@ -301,9 +302,9 @@ h1 {
 .completion-content {
     background: white;
     border-radius: 30px;
-    padding: 40px;
+    padding: 35px;
     text-align: center;
-    max-width: 600px;
+    max-width: 550px;
     width: 90%;
     box-shadow: 0 20px 50px rgba(155, 89, 182, 0.4);
     animation: pulse 1s ease-in-out;
@@ -311,34 +312,34 @@ h1 {
 
 .completion-title {
     font-family: 'Pacifico', cursive;
-    font-size: 42px;
+    font-size: 38px;
     color: #9d4edd;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .completion-emoji {
-    font-size: 60px;
-    margin-bottom: 25px;
+    font-size: 55px;
+    margin-bottom: 20px;
     animation: float 2s ease-in-out infinite;
 }
 
 .final-stats {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-bottom: 30px;
+    gap: 20px;
+    margin-bottom: 25px;
 }
 
 .final-stat {
     background: linear-gradient(135deg, #f3e5f5 0%, #e8daef 100%);
-    padding: 20px;
+    padding: 18px;
     border-radius: 15px;
-    min-width: 120px;
+    min-width: 110px;
     box-shadow: 0 5px 15px rgba(155, 89, 182, 0.1);
 }
 
 .final-stat-value {
-    font-size: 32px;
+    font-size: 28px;
     color: #9d4edd;
     font-weight: bold;
     margin-bottom: 5px;
@@ -347,27 +348,27 @@ h1 {
 .final-stat-label {
     font-family: 'Pacifico', cursive;
     color: #7b2cbf;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .completion-message {
-    font-size: 22px;
+    font-size: 20px;
     color: #5a189a;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .romantic-quote {
     font-family: 'Pacifico', cursive;
-    font-size: 24px;
+    font-size: 22px;
     color: #c77dff;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-style: italic;
 }
 
 .continue-btn {
-    padding: 18px 45px;
-    font-size: 20px;
+    padding: 16px 40px;
+    font-size: 19px;
     background: linear-gradient(45deg, #c77dff, #9d4edd);
     color: white;
     border: none;
@@ -418,28 +419,22 @@ h1 {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1100px) {
-    .grid-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
     .game-container {
-        padding: 20px;
+        padding: 25px 20px;
     }
     
     h1 {
-        font-size: 36px;
+        font-size: 34px;
     }
     
     .subtitle {
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 12px;
     }
     
     .stats-container {
@@ -447,12 +442,12 @@ h1 {
     }
     
     .stat {
-        min-width: 100px;
+        min-width: 90px;
         padding: 12px 15px;
     }
     
     .stat-value {
-        font-size: 26px;
+        font-size: 24px;
     }
     
     .card-emoji {
@@ -460,7 +455,7 @@ h1 {
     }
     
     .card-label {
-        font-size: 12px;
+        font-size: 13px;
     }
     
     .question-mark {
@@ -470,20 +465,26 @@ h1 {
     .controls {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
     
     .control-btn {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         justify-content: center;
+        padding: 12px 20px;
     }
     
     .completion-content {
-        padding: 30px 20px;
+        padding: 25px 20px;
     }
     
     .completion-title {
-        font-size: 32px;
+        font-size: 30px;
+    }
+    
+    .completion-emoji {
+        font-size: 45px;
     }
     
     .final-stats {
@@ -491,14 +492,27 @@ h1 {
     }
     
     .final-stat {
-        min-width: 100px;
+        min-width: 95px;
         padding: 15px;
+    }
+    
+    .final-stat-value {
+        font-size: 24px;
+    }
+    
+    .completion-message {
+        font-size: 18px;
+    }
+    
+    .romantic-quote {
+        font-size: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     
     .stat {
@@ -511,6 +525,18 @@ h1 {
     }
     
     .stat-label {
-        font-size: 16px;
+        font-size: 14px;
+    }
+    
+    .card-emoji {
+        font-size: 28px;
+    }
+    
+    .card-label {
+        font-size: 12px;
+    }
+    
+    .question-mark {
+        font-size: 32px;
     }
 }
