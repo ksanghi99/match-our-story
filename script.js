@@ -1,30 +1,18 @@
 // =================== GAME DATA ===================
 const cardPairs = [
-    // 12 pairs (24 cards)
+    // 6 pairs (12 cards) - Most romantic memories
     { id: 1, emoji: "📅", label: "First Date", matchId: 1 },
     { id: 2, emoji: "😊", label: "Nervous Smile", matchId: 1 },
-    { id: 3, emoji: "🎵", label: "Favorite Song", matchId: 2 },
-    { id: 4, emoji: "💃", label: "Our Dance", matchId: 2 },
-    { id: 5, emoji: "🤭", label: "Inside Joke", matchId: 3 },
-    { id: 6, emoji: "😂", label: "Laughing Together", matchId: 3 },
-    { id: 7, emoji: "🌙", label: "Late Night Calls", matchId: 4 },
-    { id: 8, emoji: "😴", label: "Sleepy Face", matchId: 4 },
-    { id: 9, emoji: "🍰", label: "Shared Dessert", matchId: 5 },
-    { id: 10, emoji: "💋", label: "Sweet Kiss", matchId: 5 },
-    { id: 11, emoji: "🌧️", label: "Rainy Day", matchId: 6 },
-    { id: 12, emoji: "🤗", label: "Cozy Hug", matchId: 6 },
-    { id: 13, emoji: "🐶", label: "Secret Nickname", matchId: 7 },
-    { id: 14, emoji: "😊", label: "Blushing Face", matchId: 7 },
-    { id: 15, emoji: "🧭", label: "Adventure Trip", matchId: 8 },
-    { id: 16, emoji: "🤩", label: "Excited Face", matchId: 8 },
-    { id: 17, emoji: "🎬", label: "Movie Night", matchId: 9 },
-    { id: 18, emoji: "🥰", label: "Cuddle Time", matchId: 9 },
-    { id: 19, emoji: "☀️", label: "Morning Text", matchId: 10 },
-    { id: 20, emoji: "😍", label: "Heart Eyes", matchId: 10 },
-    { id: 21, emoji: "📆", label: "Anniversary", matchId: 11 },
-    { id: 22, emoji: "💍", label: "Ring Promise", matchId: 11 },
-    { id: 23, emoji: "💫", label: "Forever Promise", matchId: 12 },
-    { id: 24, emoji: "♾️", label: "Infinity Love", matchId: 12 }
+    { id: 3, emoji: "🎵", label: "Our Song", matchId: 2 },
+    { id: 4, emoji: "💃", label: "First Dance", matchId: 2 },
+    { id: 5, emoji: "🌙", label: "Late Night Calls", matchId: 3 },
+    { id: 6, emoji: "🤗", label: "First Hug", matchId: 3 },
+    { id: 7, emoji: "🍰", label: "Shared Dessert", matchId: 4 },
+    { id: 8, emoji: "💋", label: "First Kiss", matchId: 4 },
+    { id: 9, emoji: "🎬", label: "Movie Nights", matchId: 5 },
+    { id: 10, emoji: "🥰", label: "Cuddle Time", matchId: 5 },
+    { id: 11, emoji: "💫", label: "Future Dreams", matchId: 6 },
+    { id: 12, emoji: "❤️", label: "Forever Love", matchId: 6 }
 ];
 
 // =================== GAME STATE ===================
@@ -72,7 +60,7 @@ function initGame() {
     // Update UI
     moveCount.textContent = '0';
     timeCount.textContent = '0s';
-    matchCount.textContent = '0/12';
+    matchCount.textContent = '0/6';
     feedbackMessage.textContent = "Start matching our memories! 💕";
     feedbackMessage.style.color = '#9d4edd';
     updateProgress();
@@ -149,7 +137,7 @@ function flipCard(card) {
 // =================== HANDLE MATCH ===================
 function handleMatch(firstCard, secondCard) {
     matches++;
-    matchCount.textContent = `${matches}/12`;
+    matchCount.textContent = `${matches}/6`;
     
     // Add matched class
     firstCard.classList.add('matched');
@@ -177,7 +165,7 @@ function handleMatch(firstCard, secondCard) {
     updateProgress();
     
     // Check for win
-    if (matches === 12) {
+    if (matches === 6) {
         winGame();
     }
     
@@ -276,7 +264,7 @@ function updateTimer() {
 
 // =================== UPDATE PROGRESS ===================
 function updateProgress() {
-    const progress = (matches / 12) * 100;
+    const progress = (matches / 6) * 100;
     progressFill.style.width = `${progress}%`;
     progressText.textContent = `${Math.round(progress)}% Complete`;
 }
@@ -287,7 +275,7 @@ function winGame() {
     clearInterval(timerInterval);
     
     const elapsed = Math.floor((Date.now() - startTime) / 1000);
-    const accuracy = Math.round((12 / moves) * 100);
+    const accuracy = moves > 0 ? Math.round((6 / moves) * 100) : 100;
     
     // Update final stats
     finalTime.textContent = `${elapsed}s`;
@@ -305,7 +293,7 @@ function winGame() {
 function createCelebrationHearts() {
     const hearts = ['❤️', '💖', '💕', '💞', '💗', '💓'];
     
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) {
         setTimeout(() => {
             const heart = document.createElement('div');
             heart.style.position = 'fixed';
